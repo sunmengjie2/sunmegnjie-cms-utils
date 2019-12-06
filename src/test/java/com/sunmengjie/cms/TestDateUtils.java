@@ -59,10 +59,12 @@ public class TestDateUtils {
 	
 	
 	
+	@SuppressWarnings("deprecation")
 	@Test
 	public void testIsThisWeek() {
 		
-		DateUtils.isThisWeek(new Date(96, 4, 30));
+		boolean b = DateUtils.isThisWeek(new Date(119, 11, 8));
+		System.out.println(b);
 	}
 	
 }
