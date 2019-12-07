@@ -136,6 +136,20 @@ public class StringUtils {
 	}
 	
 	/**
+	 *  	验证全为数字
+	 * @param str
+	 * @return
+	 */
+	public static boolean isNumber(String str) {
+		String regex="^\\d+$";
+		Pattern pattern = Pattern.compile(regex);
+		Matcher matcher = pattern.matcher(str);
+		boolean find = matcher.find();
+		
+		return find;
+	}
+	
+	/**
 	 * 随机获取一个中文汉子
 	 * @return
 	 * @throws UnsupportedEncodingException 
