@@ -106,6 +106,35 @@ public class TestStringUtils {
 		System.out.println("中文是：" + s);
 		
 	}
+	
+	@Test
+	public void testGetReplace() {
+		String replace = StringUtils.getReplace("fsdfsdf123", "sd", "66");
+//		String case1 = replace.toLowerCase();  //转换为小写
+//		String case2 = replace.toUpperCase(); //转换为大写
+		System.out.println("替换后的字符串：" + replace);
+		
+	}
 
+	/**
+	 * 	字符串插入 、  反转、  截取
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		StringBuffer sb = new StringBuffer("qwertya");
+		
+		//插入
+		sb.insert(5, "666");
+		System.out.println(sb.toString());
+		
+		//反转
+		sb.reverse();
+		System.out.println(sb.toString());
+		
+		//截取
+		String substring = sb.substring(2,5);
+		System.out.println(substring);
+	}
 	
 }

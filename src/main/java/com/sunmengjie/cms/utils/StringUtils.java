@@ -161,4 +161,20 @@ public class StringUtils {
 	}
 	
 	
+	/**
+	 * 	字符串替换
+	 * @param str  原字符串
+	 * @param old	要替换的的字符串中的旧字符
+	 * @param neo   替换的新字符
+	 * @return
+	 */
+	public static String getReplace(String str,String old,String neo) {
+		String replace = str.replace(old, neo);
+		
+		
+		return replace;
+		
+	}
+	
+	
 }
