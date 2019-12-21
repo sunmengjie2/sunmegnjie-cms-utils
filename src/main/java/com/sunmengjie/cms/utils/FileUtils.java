@@ -232,7 +232,7 @@ public class FileUtils {
 		FileInputStream fis = new FileInputStream(file);
 		
 		//创建缓冲流
-		BufferedReader br = new BufferedReader(new InputStreamReader(fis,"GBK"));
+		BufferedReader br = new BufferedReader(new InputStreamReader(fis,"UTF-8"));
 		String ln=null;
 		
 		//按行读入
