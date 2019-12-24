@@ -196,9 +196,8 @@ public class StringUtils {
 	 * @return
 	 */
 	public static boolean isUrl(String url) {
-		
-		 //转换为小写
-       String str = url.toLowerCase();
+		//转换为小写
+        String str = url.toLowerCase();
         String regex = "^((https|http|ftp|rtsp|mms)?://)"  //https、http、ftp、rtsp、mms
                 + "?(([0-9a-z_!~*'().&=+$%-]+: )?[0-9a-z_!~*'().&=+$%-]+@)?" //ftp的user@  
                + "(([0-9]{1,3}\\.){3}[0-9]{1,3}" // IP形式的URL- 例如：199.194.52.184               
