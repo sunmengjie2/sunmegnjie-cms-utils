@@ -5,6 +5,9 @@ import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+
+
+
 public class StringUtils {
 	
 	
@@ -211,6 +214,48 @@ public class StringUtils {
                 + "((/?)|" // a slash isn't required if there is no file name  
                 + "(/[0-9a-z_!~*'().;?:@&=+$,%#-]+)+/?)$";  
         return  str.matches(regex);	
+	}
+	
+	
+	//转换为小写
+	/*
+	 * String str = url.toLowerCase(); String regex =
+	 * "^((https|http|ftp|rtsp|mms)?://)" //https、http、ftp、rtsp、mms +
+	 * "?(([0-9a-z_!~*'().&=+$%-]+: )?[0-9a-z_!~*'().&=+$%-]+@)?" //ftp的user@ +
+	 * "(([0-9]{1,3}\\.){3}[0-9]{1,3}" // IP形式的URL- 例如：199.194.52.184 + "|" //
+	 * 允许IP和DOMAIN（域名） + "([0-9a-z_!~*'()-]+\\.)*" // 域名- www. +
+	 * "([0-9a-z][0-9a-z-]{0,61})?[0-9a-z]\\." // 二级域名 + "[a-z]{2,6})" // first
+	 * level domain- .com or .museum + "(:[0-9]{1,5})?" // 端口号最大为65535,5位数 +
+	 * "((/?)|" // a slash isn't required if there is no file name +
+	 * "(/[0-9a-z_!~*'().;?:@&=+$,%#-]+)+/?)$"; return str.matches(regex);
+	 */
+	
+	
+	public void  num() {
+		/**
+		 * 
+		 * 		ContextConfiguration("classpath:spring-beans.xml")
+		 * RunWith(SpringRunner.class)
+		 */
+		
+		
+		/*List<String> lines=null;
+		try {
+			lines = FileUtils.readByLines("d:\\dev\\123.txt");
+		} catch (IOException e) {
+			System.out.println("文件解析错误！！！");
+			return;
+		}
+		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+		for (String line : lines) {
+			Car car = new Car();
+			
+			String[] split = line.split("\\|");
+			
+			if(split.length!=4) {
+				System.out.println(" 数据 不合法  长度 " + line);
+				continue;
+			}*/
 	}
 	
 }
