@@ -1,10 +1,12 @@
 package com.sunmengjie.cms;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import org.junit.Test;
 
 import com.sunmengjie.cms.utils.DateUtils;
+import com.sunmengjie.cms.utils.RandomUtils;
 
 public class TestDateUtils {
 
@@ -65,6 +67,13 @@ public class TestDateUtils {
 //		
 //		boolean b = DateUtils.isThisWeek(new Date(119, 11, 8));
 //		System.out.println(b);
+//	}
+	
+//	@Test
+//	public void RandomDate() {
+//		Date randomDate = RandomUtils.randomDate("2019-01-01", "2020-02-15");
+//		SimpleDateFormat Format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+//		System.out.println(Format.format(randomDate));
 //	}
 	
 }
