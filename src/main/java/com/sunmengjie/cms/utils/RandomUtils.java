@@ -1,6 +1,9 @@
 package com.sunmengjie.cms.utils;
 
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.Random;
 
@@ -76,9 +79,13 @@ public class RandomUtils {
         return resultBt;
     }
 
+    
+    //获取随机数
     public static int getNum(int start,int end) {
         return (int)(Math.random()*(end-start+1)+start);
     }
+    
+    
     //随机生成电话号码133开头
     private static String[] telFirst = "133".split(",");
     public static String getPhone(){
@@ -89,5 +96,35 @@ public class RandomUtils {
         return first+second+thrid;
 
     }
+    
+    
+    //随机返回日期
+    public static Date randomDate(String beginDate,String endDate) {
+		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+		try {
+			Date start = format.parse(beginDate);
+			Date end = format.parse(endDate);
+			if(start.getTime()>=end.getTime()) {
+				return null;
+			}
+			long date = random(start.getTime(),end.getTime());
+			return new Date(date);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+		
+	}
+	public static long random(long begin,long end) {
+		long rtn = begin + (long)(Math.random()*(end-begin));
+		if(rtn==begin || rtn==end) {
+			return random(begin,end);
+		}
+		return rtn;
+	}
+    
+    
+   
    
 }

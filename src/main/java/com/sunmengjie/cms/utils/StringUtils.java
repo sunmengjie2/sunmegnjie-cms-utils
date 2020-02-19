@@ -194,6 +194,18 @@ public class StringUtils {
 	}
 	
 	/**
+	 * 判断判断传入的字符串是否为以http打头的url地址
+	 * @param src
+	 * @return
+	 */
+	public static boolean isHttpUrl(String src){
+		boolean flag = src.startsWith("http");
+		
+		
+		return flag;
+	}
+	
+	/**
 	 * 判断是不是合法的Url
 	 * @param url
 	 * @return
@@ -232,11 +244,6 @@ public class StringUtils {
 	
 	
 	public void  num() {
-		/**
-		 * 
-		 * 		ContextConfiguration("classpath:spring-beans.xml")
-		 * RunWith(SpringRunner.class)
-		 */
 		
 		
 		/*List<String> lines=null;
